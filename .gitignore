@@ -1,0 +1,17 @@
+# Ignoruj środowisko wirtualne
+.venv/
+venv/
+
+# Ignoruj pliki tymczasowe Pythona
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignoruj pliki PyCharm
+.idea/
+
+
+# Inne pliki tymczasowe
+*.log
+*.tmp
