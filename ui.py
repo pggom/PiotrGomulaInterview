@@ -13,8 +13,39 @@ import pandas as pd
 
 dict_with_polishword_key, dict_with_used_word = create_dict_from_xls(PATH_TO_XLS)
 
+
 pl_word_list = [str(key) for key in dict_with_polishword_key.keys()]
 pl_word_list.sort(key=str.lower)
+
+# english_tenses = [
+#     "Present Simple",
+#     "Present Continuous",
+#     "Present Perfect Simple",
+#     "Past Simple",
+#     "Past Continuous",
+#     "Past Perfect Simple",
+#     "Future Simple (will)",
+#     "Be going to",
+#     "Zero Conditional",
+#     "First Conditional",
+#     "Second Conditional",
+#     "Third Conditional",
+#     "Reported Speech",
+#     "Passive voice",
+#     "Can, could, be able to",
+#     "Must, have to, need to",
+#     "Should",
+#     "May, might",
+#     "Gerund",
+#     "Infinitive",
+#     "Defining Relative Clauses",
+#     "Non-defining Relative Clauses",
+#     "Comparative Structures",
+#     "Used to"
+# ]
+#
+# pl_word_list += english_tenses
+
 
 
 
