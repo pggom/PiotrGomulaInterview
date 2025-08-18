@@ -9,7 +9,7 @@ class PlSentence(WordOrSentence):
 
         self._guiding_word = str(f"{self._guiding_word} - 3")
         self.my_language_code = 'pl-PL'
-        self.my_name = 'pl-PL-Standard-B'
+        self.my_name = 'pl-PL-Standard-F'
 
 
     def translate_sentance(self):
