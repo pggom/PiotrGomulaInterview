@@ -22,6 +22,7 @@ _all_words = dict(sorted(
     # jeśli bez polskiej lokalizacji: key=lambda kv: (kv[1][1], kv[0].lower())
 ))
 
+
 print(_all_words)
 # teraz ta kolejność jest “permanentna” dla tego obiektu
 pl_word_list = list(_all_words.keys())
