@@ -142,6 +142,8 @@ def load_word_by_index(idx: int):
     pl_word_display.configure(text=f"{pl_word.content}")
     answer_entry.delete(0, "end")
 
+    print(f"Słowo: {selected_word} | Punkty: {_points}")
+
 # >>> ZMIANA: „Sprawdź” bez comboboxa – przejście do kolejnego indeksu
 def check_answer():
     global current_idx
