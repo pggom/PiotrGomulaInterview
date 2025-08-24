@@ -11,15 +11,18 @@ class WordOrSentence:
         xls_data = pandas.read_excel(PATH_TO_XLS)
         self._guiding_word = xls_data.iloc[row_nr - 2,2]
         self.content = xls_data.iloc[row_nr-2,2]
+        self.pause_duration = int(len(self.content)/6 + 4)
+        self.audio_file_path = False
 
     def __len__(self):
         duration_lenght = int(1+len(self.content)/6)
         return duration_lenght
 
-    def pouse_duration(self, duration):
-        self.pouse_duration = duration
+    def set_pause_duration(self, duration):
+        self.pause_duration = int(duration)
 
-
+    def set_existing_audio(self, path: str):
+        self.audio_file_path = path
 
     def prepare_file_to_tts(self, new_folder_path):
 

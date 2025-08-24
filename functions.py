@@ -9,6 +9,7 @@ from openai import OpenAI
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PATH_TO_XLS = os.path.join(BASE_DIR, "Text_Files", "słówka_ang_dane.xlsx")
+AUDIO_BASE = r"C:\Users\admin\Documents\ANGIELSKI\Angielski do słuchania"
 
 if not os.path.exists(PATH_TO_XLS):
     error_message = ttk.Tk()
@@ -178,7 +179,7 @@ def combine_audio(list_word_and_folder):
             audio = _resample_linear(audio, sr, sample_rate)
 
         # pauza w próbkach (stereo => (N,2))
-        pause_samples = int(element.pouse_duration) * sample_rate
+        pause_samples = int(element.pause_duration) * sample_rate
         if pause_samples < 0:
             pause_samples = 0
         pause = np.zeros((pause_samples, 2), dtype=np.float32)
